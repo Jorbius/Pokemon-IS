@@ -46,7 +46,8 @@ public class ControladorPartida {
 	public boolean atacar() {
 		boolean todoListo = true;
 		if (this.jAtacante != null && this.pAtacante != null && this.jDefensor != null && this.pDefensor != null){
-			this.pDefensor.atacar(this.pAtacante.getAtaque());
+			if (!pAtacante.getDerrotado())  {
+				this.pDefensor.atacar(this.pAtacante.getAtaque());}
 			if (this.jDefensor.getListaPokemons().todosDerrotados()) {
 				this.jDefensor.setDerrotado(true);
 			}
