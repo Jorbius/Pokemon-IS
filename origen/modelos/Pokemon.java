@@ -58,7 +58,7 @@ public class Pokemon extends Observable{
 			daño = 0;
 		}
 		this.vida-=daño;
-		if (this.vida == 0) {
+		if (this.vida < 1) {
 			derrotado = true;
 		}
 		actualizarStats();
