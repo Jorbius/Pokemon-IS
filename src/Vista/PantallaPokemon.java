@@ -138,7 +138,7 @@ public class PantallaPokemon extends JPanel implements Observer{
 		if (Integer.parseInt(datos[2]) >= 1) {
 			this.textArea.setForeground(Color.BLACK);
 		} else {
-			this.derrotado = false;
+			this.derrotado = true;
 			this.textArea.setForeground(Color.WHITE);
 			this.labelPokemon.setEnabled(false);
 		}
