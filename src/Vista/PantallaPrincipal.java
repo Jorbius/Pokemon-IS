@@ -63,10 +63,10 @@ public class PantallaPrincipal extends JFrame implements Observer{
 	 * Create the frame.
 	 */
 	public PantallaPrincipal() {
-		setTitle("P0K3M0N B4TTL3 4R3N4");
+		setTitle("P0KEM0N BATTLE ARENA");
 		setForeground(Color.LIGHT_GRAY);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 600, 350);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -107,13 +107,15 @@ public class PantallaPrincipal extends JFrame implements Observer{
 		if (labelLogo1 == null) {
 			labelLogo1 = new JLabel();
 			labelLogo1.setIcon(new ImageIcon(PantallaPrincipal.class.getResource("/Fotos/pokemon3.png")));
+			this.labelLogo1.setHorizontalAlignment(0);
 		}
 		return labelLogo1;
 	}
 	private JLabel getLabelLogo2() {
 		if (labelLogo2 == null) {
 			labelLogo2 = new JLabel();
-			labelLogo2.setIcon(new ImageIcon(PantallaPrincipal.class.getResource("/Fotos/logo.jpeg")));
+			labelLogo2.setIcon(new ImageIcon(PantallaPrincipal.class.getResource("/Fotos/logo7.jpg")));
+			this.labelLogo2.setHorizontalAlignment(0);
 		}
 		return labelLogo2;
 	}
@@ -211,3 +213,4 @@ public class PantallaPrincipal extends JFrame implements Observer{
 		pj.setVisible(true);
 	}
 }
+
