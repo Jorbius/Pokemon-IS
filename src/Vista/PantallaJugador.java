@@ -33,8 +33,8 @@ public class PantallaJugador extends JFrame implements Observer{
 	private JPanel panelJugador;
 	private int idJugador;
 	private String nombre;
-	private static int xPos = 300;
-	private static int yPos = 300;
+	private static int xPos = 200;
+	private static int yPos = 200;
 	private JLabel labelTurno;
 	private JLabel labelFoto;
 	private Random random = new Random();
