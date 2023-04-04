@@ -33,8 +33,8 @@ public class PantallaJugador extends JFrame implements Observer{
 	private JPanel panelJugador;
 	private int idJugador;
 	private String nombre;
-	private static int xPos = 400;
-	private static int yPos = 400;
+	private static int xPos = 300;
+	private static int yPos = 300;
 	private JLabel labelTurno;
 	private JLabel labelFoto;
 	private Random random = new Random();
@@ -60,7 +60,7 @@ public class PantallaJugador extends JFrame implements Observer{
 		this.nombre = pNombre;
 		setTitle(pNombre);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(xPos, yPos, 80 + pNumPokemons * 150, 274);
+		setBounds(xPos, yPos, 80 + pNumPokemons * 150, 450);
 		contentPane = new JPanel();
 
 		setContentPane(contentPane);
