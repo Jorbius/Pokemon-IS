@@ -4,7 +4,6 @@ import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import javax.swing.JProgressBar;
 
-import Modelo.ControladorPartida;
 import Modelo.ListaJugadores;
 
 import java.awt.Color;
@@ -18,6 +17,8 @@ import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
+
+import Controlador.ControladorPartida;
 
 public class PantallaPokemon extends JPanel implements Observer{
 	private JPanel panelVida;

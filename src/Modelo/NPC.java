@@ -1,6 +1,8 @@
 package Modelo;
 
 import java.util.Random;
+
+import Controlador.ControladorPartida;
 import Modelo.Pokemon;
 
 public class NPC extends Jugador{
@@ -9,6 +11,8 @@ public class NPC extends Jugador{
 		super(pPokemon, cant);
 		setNombre("NPC " + cant);
 	}
+	// Para cada pokemon del NPC atacante, elige un jugador/npc defensor, elige los pokemons defensores
+	// los setea en el controlador de la partida y ataca
 	public void jugar() {
 		for (Pokemon pAtacante : getListaPokemons().getPokemonVivos()) {
 			Jugador jDefensor = ListaJugadores.getListaJugadores().jugadorRandom(this);
