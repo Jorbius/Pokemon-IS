@@ -26,7 +26,7 @@ import java.awt.event.MouseListener;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-public class PantallaJugador extends JFrame implements Observer{
+public class PantallaJugador extends JFrame implements Observer {
 
 	private JPanel contentPane;
 	private JPanel panelPokemon;
@@ -40,7 +40,6 @@ public class PantallaJugador extends JFrame implements Observer{
 	private Random random = new Random();
 	private ArrayList<PantallaPokemon> listaPokemons = new ArrayList<>();
 	private Controler controler = null;
-	
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -82,6 +81,7 @@ public class PantallaJugador extends JFrame implements Observer{
 		}
 		return panelPokemon;
 	}
+
 	private JPanel getPanelJugador() {
 		if (panelJugador == null) {
 			panelJugador = new JPanel();
@@ -91,6 +91,7 @@ public class PantallaJugador extends JFrame implements Observer{
 		}
 		return panelJugador;
 	}
+
 	private JLabel getLabelTurno() {
 		if (this.labelTurno == null) {
 			this.labelTurno = new JLabel("Turno");
@@ -102,63 +103,72 @@ public class PantallaJugador extends JFrame implements Observer{
 		}
 		return labelTurno;
 	}
+
 	private JLabel getLabelFoto() {
 		if (labelFoto == null) {
 			labelFoto = new JLabel();
-			String foto = CargarPokemons.getCargarPokemons().buscarTipo("Entrenador"+this.random.nextInt(6));
+			String foto = CargarPokemons.getCargarPokemons().buscarTipo("Entrenador" + this.random.nextInt(6));
 			labelFoto.setIcon(new ImageIcon(PantallaPokemon.class.getResource(foto)));
 		}
 		return labelFoto;
 	}
+
 	public String getNombreJugador() {
 		return this.nombre;
 	}
+
 	public int getIdJugador() {
 		return this.idJugador;
 	}
+
 	private class Controler implements MouseListener {
 
 		@Override
 		public void mouseClicked(MouseEvent e) {
-			if (ListaJugadores.getListaJugadores().getPosicionJugador(PantallaJugador.this.idJugador).getTurno() && !(ListaJugadores.getListaJugadores().getPosicionJugador(PantallaJugador.this.idJugador) instanceof Modelo.NPC)) {
+			if (ListaJugadores.getListaJugadores().getPosicionJugador(PantallaJugador.this.idJugador).getTurno()
+					&& !(ListaJugadores.getListaJugadores()
+							.getPosicionJugador(PantallaJugador.this.idJugador) instanceof Modelo.NPC)) {
 				Juego.getJuego().iniciarJuego();
-				PantallaJugador.this.listaPokemons.stream().filter(p -> !p.Derrotado()).forEach(p -> p.setLabelEnabled());
+				PantallaJugador.this.listaPokemons.stream().filter(p -> !p.Derrotado())
+						.forEach(p -> p.setLabelEnabled());
 			}
 		}
 
 		@Override
 		public void mousePressed(MouseEvent e) {
 			// TODO Auto-generated method stub
-			
+
 		}
 
 		@Override
 		public void mouseReleased(MouseEvent e) {
 			// TODO Auto-generated method stub
-			
+
 		}
 
 		@Override
 		public void mouseEntered(MouseEvent e) {
 			// TODO Auto-generated method stub
-			
+
 		}
 
 		@Override
 		public void mouseExited(MouseEvent e) {
 			// TODO Auto-generated method stub
-			
+
 		}
 	}
+
 	private Controler getControler() {
-		if(this.controler == null) {
+		if (this.controler == null) {
 			this.controler = new Controler();
 		}
 		return this.controler;
 	}
+
 	public void update(Observable arg0, Object arg1) {
-		Object[] datos = (Object[])arg1;
-		if(((Boolean)datos[0]).booleanValue()) {
+		Object[] datos = (Object[]) arg1;
+		if (((Boolean) datos[0]).booleanValue()) {
 			if (ListaJugadores.getListaJugadores().ganador()) {
 				labelTurno.setText(" GANADOR ");
 			} else {
@@ -168,7 +178,7 @@ public class PantallaJugador extends JFrame implements Observer{
 			labelTurno.setForeground(Color.BLACK);
 			this.listaPokemons.stream().filter(p -> !p.Derrotado()).forEach(p -> p.setLabelEnabled());
 		} else {
-			if(ListaJugadores.getListaJugadores().getPosicionJugador(this.idJugador).getDerrotado() == true) {
+			if (ListaJugadores.getListaJugadores().getPosicionJugador(this.idJugador).getDerrotado() == true) {
 				labelTurno.setText(" DERROTADO ");
 				labelTurno.setBackground(Color.RED);
 			} else {
