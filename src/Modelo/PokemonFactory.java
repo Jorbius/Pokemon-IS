@@ -1,16 +1,22 @@
 package Modelo;
 
+import Modelo.Tipos.PokemonAcero;
 import Modelo.Tipos.PokemonAgua;
 import Modelo.Tipos.PokemonBicho;
 import Modelo.Tipos.PokemonDragon;
 import Modelo.Tipos.PokemonElectrico;
 import Modelo.Tipos.PokemonFantasma;
 import Modelo.Tipos.PokemonFuego;
+import Modelo.Tipos.PokemonHada;
+import Modelo.Tipos.PokemonHielo;
 import Modelo.Tipos.PokemonLucha;
+import Modelo.Tipos.PokemonNormal;
 import Modelo.Tipos.PokemonPlanta;
 import Modelo.Tipos.PokemonVolador;
 import Modelo.Tipos.PokemonPsiquico;
 import Modelo.Tipos.PokemonRoca;
+import Modelo.Tipos.PokemonTierra;
+import Modelo.Tipos.PokemonVeneno;
 import Modelo.Tipos.Tipo;
 
 public class PokemonFactory {
@@ -57,6 +63,25 @@ public class PokemonFactory {
 		if (tipo == Tipo.VOLADOR ) {
 			pokemon = new PokemonVolador(pos);
 		}
+		if (tipo == Tipo.HIELO ) {
+			pokemon = new PokemonHielo(pos);
+		}
+		if (tipo == Tipo.TIERRA ) {
+			pokemon = new PokemonTierra(pos);
+		}
+		if (tipo == Tipo.ACERO ) {
+			pokemon = new PokemonAcero(pos);
+		}
+		if (tipo == Tipo.VENENO ) {
+			pokemon = new PokemonVeneno(pos);
+		}
+		if (tipo == Tipo.HADA ) {
+			pokemon = new PokemonHada(pos);
+		}
+		if (tipo == Tipo.NORMAL ) {
+			pokemon = new PokemonNormal(pos);
+		}
+		
 		return pokemon;
 	}
 }
