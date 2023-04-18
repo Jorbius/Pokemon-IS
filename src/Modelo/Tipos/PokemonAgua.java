@@ -11,7 +11,7 @@ public class PokemonAgua extends Pokemon{
 	
 	protected int aumentarAtaque(Tipo tipo) {
 		int aumento = 1;
-		if (tipo.equals(Tipo.ELECTRICO) || tipo.equals(Tipo.PLANTA)) {
+		if (tipo.equals(Tipo.TIERRA) || tipo.equals(Tipo.ROCA)|| tipo.equals(Tipo.FUEGO)) {
 			aumento = this.random.nextInt(2)+2;
 		}
 		return aumento;
