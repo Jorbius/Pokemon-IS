@@ -14,6 +14,9 @@ public class PokemonDragon extends Pokemon{
 		if (tipo.equals(Tipo.DRAGON)) {
 			aumento = this.random.nextInt(2)+2;
 		}
+		if (tipo.equals(Tipo.HADA)) {
+			aumento = 0;
+		}
 		return aumento;
 	}
 }
