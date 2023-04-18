@@ -11,8 +11,11 @@ public class PokemonElectrico extends Pokemon{
 	
 	protected int aumentarAtaque(Tipo tipo) {
 		int aumento = 1;
-		if (tipo.equals(Tipo.ROCA)) {
+		if (tipo.equals(Tipo.AGUA)||tipo.equals(Tipo.VOLADOR) ) {
 			aumento = this.random.nextInt(2)+2;
+		}
+		if (tipo.equals(Tipo.TIERRA) ) {
+			aumento = 0;
 		}
 		return aumento;
 	}
