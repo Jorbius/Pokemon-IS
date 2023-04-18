@@ -11,7 +11,7 @@ public class PokemonPlanta extends Pokemon{
 	
 	protected int aumentarAtaque(Tipo tipo) {
 		int aumento = 1;
-		if (tipo.equals(Tipo.FUEGO) || tipo.equals(Tipo.BICHO) || tipo.equals(Tipo.VOLADOR)) {
+		if (tipo.equals(Tipo.TIERRA) || tipo.equals(Tipo.ROCA) || tipo.equals(Tipo.AGUA)) {
 			aumento = this.random.nextInt(2)+2;
 		}
 		return aumento;
