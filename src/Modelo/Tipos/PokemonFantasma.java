@@ -11,8 +11,11 @@ public class PokemonFantasma extends Pokemon{
 	
 	protected int aumentarAtaque(Tipo tipo) {
 		int aumento = 1;
-		if (tipo.equals(Tipo.FANTASMA)) {
+		if (tipo.equals(Tipo.FANTASMA)||tipo.equals(Tipo.PSIQUICO)) {
 			aumento = this.random.nextInt(2)+2;
+		}
+		if (tipo.equals(Tipo.NORMAL)) {
+			aumento = 0;
 		}
 		return aumento;
 	}
