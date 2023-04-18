@@ -15,6 +15,7 @@ import Modelo.Tipos.PokemonPlanta;
 import Modelo.Tipos.PokemonVolador;
 import Modelo.Tipos.PokemonPsiquico;
 import Modelo.Tipos.PokemonRoca;
+import Modelo.Tipos.PokemonSiniestro;
 import Modelo.Tipos.PokemonTierra;
 import Modelo.Tipos.PokemonVeneno;
 import Modelo.Tipos.Tipo;
@@ -80,6 +81,9 @@ public class PokemonFactory {
 		}
 		if (tipo == Tipo.NORMAL ) {
 			pokemon = new PokemonNormal(pos);
+		}
+		if (tipo == Tipo.SINIESTRO ) {
+			pokemon = new PokemonSiniestro(pos);
 		}
 		
 		return pokemon;
