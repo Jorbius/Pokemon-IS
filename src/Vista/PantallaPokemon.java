@@ -31,6 +31,8 @@ public class PantallaPokemon extends JPanel implements Observer {
 	private boolean derrotado = false;
 	private String foto;
 	private Random random = new Random();
+	private JPanel panelFuria;
+	private JProgressBar barraFuria;
 
 	public PantallaPokemon(int pIdJugador, int pIdPokemon) {
 		this.idJugador = pIdJugador;
@@ -39,6 +41,7 @@ public class PantallaPokemon extends JPanel implements Observer {
 		add(getPanelVida(), BorderLayout.NORTH);
 		add(getLabelPokemon(), BorderLayout.CENTER);
 		add(getTextArea(), BorderLayout.WEST);
+		add(getPanelFuria(), BorderLayout.SOUTH);
 		addMouseListener(getControler());
 
 	}
@@ -81,9 +84,27 @@ public class PantallaPokemon extends JPanel implements Observer {
 			textArea = new JTextArea();
 			textArea.setEditable(false);
 			textArea.addMouseListener(getControler());
-			textArea.setText("\r\n Vida: ??\r\n Ataque: ??\r\n Defensa: ??");
+			textArea.setText("\r\n Vida: ??\r\n Ataque: ??\r\n Defensa: ??\r\n Tipo: ??");
 		}
 		return textArea;
+	}
+	
+	private JPanel getPanelFuria() {
+		if (panelFuria == null) {
+			panelFuria = new JPanel();
+			panelFuria.setLayout(new GridLayout(1, 0, 0, 0));
+			panelFuria.add(getBarraFuria());
+		}
+		return panelFuria;
+	}
+	private JProgressBar getBarraFuria() {
+		if (barraFuria == null) {
+			barraFuria = new JProgressBar();
+			barraFuria.setString("Furia");
+			barraFuria.setStringPainted(true);
+			barraFuria.setForeground(new Color(157, 0, 4));
+		}
+		return barraFuria;
 	}
 
 	public boolean Derrotado() {
@@ -157,17 +178,24 @@ public class PantallaPokemon extends JPanel implements Observer {
 		if (vida <= 15) {
 			barraVida.setForeground(Color.RED);
 		}
+		int furia = (int) (100.0F * Float.parseFloat(datos[7]) / Integer.parseInt(datos[6]));
+		barraFuria.setValue(furia);
 		if (Integer.parseInt(datos[2]) >= 1) {
-			this.textArea.setForeground(Color.BLACK);
+			if (furia == 100) {
+				this.textArea.setForeground(new Color(157, 0, 4));
+			} else {
+				this.textArea.setForeground(Color.BLACK);
+			}
 		} else {
 			this.derrotado = true;
 			this.textArea.setForeground(Color.WHITE);
 			this.labelPokemon.setEnabled(false);
 		}
-		this.stats = "\n Ataque: " + datos[0] + "\n Defensa: " + datos[1] + "\n Vida: " + datos[2] + "/" + datos[3];
+		this.stats = "\n Ataque: " + datos[0] + "\n Defensa: " + datos[1] + "\n Vida: " + datos[2] + "/" + datos[3] + "\n Tipo: " + datos[4].toLowerCase();
 		this.textArea.setText(this.stats);
-		this.foto = CargarPokemons.getCargarPokemons().buscarTipo(String.valueOf(datos[4]) + datos[5]);
-		this.labelPokemon.setIcon(new ImageIcon(PantallaPokemon.class.getResource(this.foto)));
-
+		if (Integer.parseInt(datos[5]) != -1) {
+			this.foto = CargarPokemons.getCargarPokemons().buscarTipo(String.valueOf(datos[4]) + datos[5]);
+			this.labelPokemon.setIcon(new ImageIcon(PantallaPokemon.class.getResource(this.foto)));
+		}
 	}
 }
