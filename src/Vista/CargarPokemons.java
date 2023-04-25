@@ -21,45 +21,84 @@ public class CargarPokemons {
 	// Insertar los pokemons
 	private CargarPokemons() {
 		this.pokemons = new HashMap<>();
-		this.pokemons.put("PSIQUICO0", "/Fotos/abra.png");
-		this.pokemons.put("PSIQUICO2", "/Fotos/alakazam.png");
+		this.pokemons.put("ACERO0", "/Fotos/klink.png");
+		this.pokemons.put("ACERO1", "/Fotos/klank.png");
+		this.pokemons.put("ACERO2", "/Fotos/klinklank.png");
+		
+		this.pokemons.put("AGUA0", "/Fotos/squirtle.png");
+		this.pokemons.put("AGUA1", "/Fotos/wartortle.png");
 		this.pokemons.put("AGUA2", "/Fotos/blastoise.png");
-		this.pokemons.put("PLANTA0", "/Fotos/bulbasaur.png");
-		this.pokemons.put("BICHO2", "/Fotos/butterfree.png");
+		
 		this.pokemons.put("BICHO0", "/Fotos/caterpie.png");
-		this.pokemons.put("FUEGO2", "/Fotos/charizard.png");
-		this.pokemons.put("FUEGO0", "/Fotos/charmander.png");
-		this.pokemons.put("FUEGO2", "/Fotos/charmeleon.png");
+		this.pokemons.put("BICHO1", "/Fotos/metapod.png");
+		this.pokemons.put("BICHO2", "/Fotos/butterfree.png");
+		
+		this.pokemons.put("DRAGON0", "/Fotos/dratini.png");
 		this.pokemons.put("DRAGON1", "/Fotos/dragonair.png");
 		this.pokemons.put("DRAGON2", "/Fotos/dragonite.png");
-		this.pokemons.put("DRAGON0", "/Fotos/dratini.png");
-		this.pokemons.put("FANTASMA0", "/Fotos/gastly.png");
-		this.pokemons.put("FANTASMA2", "/Fotos/gengar.png");
-		this.pokemons.put("ROCA0", "/Fotos/geodude.png");
-		this.pokemons.put("ROCA2", "/Fotos/golem.png");
-		this.pokemons.put("ROCA1", "/Fotos/graveler.png");
-		this.pokemons.put("FANTASMA1", "/Fotos/haunter.png");
-		this.pokemons.put("PLANTA1", "/Fotos/ivysaur.png");
-		this.pokemons.put("PSIQUICO1", "/Fotos/kadabra.png");
-		this.pokemons.put("LUCHA2", "/Fotos/machamp.png");
-		this.pokemons.put("LUCHA1", "/Fotos/machoke.png");
-		this.pokemons.put("LUCHA0", "/Fotos/machop.png");
-		this.pokemons.put("BICHO1", "/Fotos/metapod.png");
-		this.pokemons.put("VOLADOR2", "/Fotos/pidgeot.png");
-		this.pokemons.put("VOLADOR1", "/Fotos/pidgeotto.png");
-		this.pokemons.put("VOLADOR0", "/Fotos/pidgey.png");
+		
 		this.pokemons.put("ELECTRICO0", "/Fotos/pikachu.png");
 		this.pokemons.put("ELECTRICO1", "/Fotos/raichu.png");
 		this.pokemons.put("ELECTRICO2", "/Fotos/raichu2.png");
-		this.pokemons.put("AGUA0", "/Fotos/squirtle.png");
+		
+		this.pokemons.put("FANTASMA0", "/Fotos/gastly.png");
+		this.pokemons.put("FANTASMA1", "/Fotos/haunter.png");
+		this.pokemons.put("FANTASMA2", "/Fotos/gengar.png");
+		
+		this.pokemons.put("FUEGO0", "/Fotos/charmander.png");
+		this.pokemons.put("FUEGO1", "/Fotos/charmeleon.png");
+		this.pokemons.put("FUEGO2", "/Fotos/charizard.png");
+		
+		this.pokemons.put("HADA0", "/Fotos/flabebe.png");
+		this.pokemons.put("HADA1", "/Fotos/floette.png");
+		this.pokemons.put("HADA2", "/Fotos/florges.png");
+		
+		this.pokemons.put("HIELO0", "/Fotos/vanillite.png");
+		this.pokemons.put("HIELO1", "/Fotos/vanillish.png");
+		this.pokemons.put("HIELO2", "/Fotos/vanilluxe.png");
+		
+		this.pokemons.put("LUCHA0", "/Fotos/machop.png");
+		this.pokemons.put("LUCHA1", "/Fotos/machoke.png");
+		this.pokemons.put("LUCHA2", "/Fotos/machamp.png");
+		
+		this.pokemons.put("NORMAL0", "/Fotos/lillipup.png");
+		this.pokemons.put("NORMAL1", "/Fotos/herdier.png");
+		this.pokemons.put("NORMAL2", "/Fotos/stoutland.png");
+		
+		this.pokemons.put("PLANTA0", "/Fotos/bulbasaur.png");
+		this.pokemons.put("PLANTA1", "/Fotos/ivysaur.png");
+		this.pokemons.put("PLANTA2", "/Fotos/venusaur.png");
+		
+		this.pokemons.put("PSIQUICO0", "/Fotos/abra.png");
+		this.pokemons.put("PSIQUICO1", "/Fotos/kadabra.png");
+		this.pokemons.put("PSIQUICO2", "/Fotos/alakazam.png");
+		
+		this.pokemons.put("ROCA0", "/Fotos/geodude.png");
+		this.pokemons.put("ROCA1", "/Fotos/graveler.png");
+		this.pokemons.put("ROCA2", "/Fotos/golem.png");
+		
+		this.pokemons.put("SINIESTRO0", "/Fotos/pawniard.png");
+		this.pokemons.put("SINIESTRO1", "/Fotos/bisharp.png");
+		this.pokemons.put("SINIESTRO2", "/Fotos/kingambit.png");
+		
+		this.pokemons.put("TIERRA0", "/Fotos/ryhorn.png");
+		this.pokemons.put("TIERRA1", "/Fotos/rydon.png");
+		this.pokemons.put("TIERRA2", "/Fotos/ryperior.png");
+		
+		this.pokemons.put("VENENO0", "/Fotos/nidoran.png");
+		this.pokemons.put("VENENO1", "/Fotos/nidorino.png");
+		this.pokemons.put("VENENO2", "/Fotos/nidoking.png");
+		
+		this.pokemons.put("VOLADOR0", "/Fotos/pidgey.png");
+		this.pokemons.put("VOLADOR1", "/Fotos/pidgeotto.png");
+		this.pokemons.put("VOLADOR2", "/Fotos/pidgeot.png");
+		
 		this.pokemons.put("Entrenador0", "/Fotos/trainer0.png");
 		this.pokemons.put("Entrenador1", "/Fotos/trainer1.png");
 		this.pokemons.put("Entrenador2", "/Fotos/trainer2.png");
 		this.pokemons.put("Entrenador3", "/Fotos/trainer3.png");
 		this.pokemons.put("Entrenador4", "/Fotos/trainer4.png");
 		this.pokemons.put("Entrenador5", "/Fotos/trainer5.png");
-		this.pokemons.put("PLANTA2", "/Fotos/venusaur.png");
-		this.pokemons.put("AGUA1", "/Fotos/wartortle.png");
 	}
 
 	// El méteodo devuelve una ruta de la imagen aleatoria de uno de los pokemons.
