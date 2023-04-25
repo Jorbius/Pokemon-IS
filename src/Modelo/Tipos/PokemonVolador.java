@@ -11,8 +11,11 @@ public class PokemonVolador extends Pokemon{
 	
 	protected int aumentarAtaque(Tipo tipo) {
 		int aumento = 1;
-		if (tipo.equals(Tipo.PLANTA) || tipo.equals(Tipo.BICHO) || tipo.equals(Tipo.LUCHA)) {
+		if (tipo.equals(Tipo.HIELO) || tipo.equals(Tipo.ELECTRICO) || tipo.equals(Tipo.ROCA)) {
 			aumento = this.random.nextInt(2)+2;
+		}
+		if (tipo.equals(Tipo.TIERRA) ) {
+			aumento = 0;
 		}
 		return aumento;
 	}

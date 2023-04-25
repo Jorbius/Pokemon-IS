@@ -11,10 +11,10 @@ public class PokemonTierra extends Pokemon{
 	
 	protected int aumentarAtaque(Tipo tipo) {
 		int aumento = 1;
-		if (tipo.equals(Tipo.ELECTRICO) || tipo.equals(Tipo.ROCA)||tipo.equals(Tipo.FUEGO) || tipo.equals(Tipo.VENENO)|| tipo.equals(Tipo.ACERO)) {
+		if (tipo.equals(Tipo.HIELO) || tipo.equals(Tipo.AGUA)||tipo.equals(Tipo.PLANTA)) {
 			aumento = this.random.nextInt(2)+2;
 		}
-		if (tipo.equals(Tipo.VOLADOR)) {
+		if (tipo.equals(Tipo.ELECTRICO)) {
 			aumento = 0;
 		}
 		return aumento;

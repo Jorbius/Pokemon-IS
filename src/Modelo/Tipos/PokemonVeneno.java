@@ -11,11 +11,8 @@ public class PokemonVeneno extends Pokemon{
 	
 	protected int aumentarAtaque(Tipo tipo) {
 		int aumento = 1;
-		if (tipo.equals(Tipo.HADA) || tipo.equals(Tipo.PLANTA)) {
+		if (tipo.equals(Tipo.TIERRA) || tipo.equals(Tipo.PSIQUICO)) {
 			aumento = this.random.nextInt(2)+2;
-		}
-		if (tipo.equals(Tipo.ACERO)) {
-			aumento = 0;
 		}
 		return aumento;
 	}

@@ -11,7 +11,7 @@ public class PokemonFuego extends Pokemon{
 	
 	protected int aumentarAtaque(Tipo tipo) {
 		int aumento = 1;
-		if (tipo.equals(Tipo.HIELO) || tipo.equals(Tipo.PLANTA)||tipo.equals(Tipo.BICHO) || tipo.equals(Tipo.ACERO)) {
+		if (tipo.equals(Tipo.AGUA) || tipo.equals(Tipo.ROCA)||tipo.equals(Tipo.TIERRA)) {
 			aumento = this.random.nextInt(2)+2;
 		}
 		return aumento;

@@ -11,7 +11,7 @@ public class PokemonBicho extends Pokemon{
 	
 	protected int aumentarAtaque(Tipo tipo) {
 		int aumento = 1;
-		if (tipo.equals(Tipo.PLANTA) || tipo.equals(Tipo.PSIQUICO) || tipo.equals(Tipo.SINIESTRO)) {
+		if (tipo.equals(Tipo.VOLADOR) || tipo.equals(Tipo.ROCA) || tipo.equals(Tipo.FUEGO)) {
 			aumento = this.random.nextInt(2)+2;
 		}
 		return aumento;

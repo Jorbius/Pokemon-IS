@@ -193,7 +193,7 @@ public class PantallaPokemon extends JPanel implements Observer {
 		}
 		this.stats = "\n Ataque: " + datos[0] + "\n Defensa: " + datos[1] + "\n Vida: " + datos[2] + "/" + datos[3] + "\n Tipo: " + datos[4].toLowerCase();
 		this.textArea.setText(this.stats);
-		if (Integer.parseInt(datos[5]) != -1) {
+		if (Integer.parseInt(datos[5]) != 3) {
 			this.foto = CargarPokemons.getCargarPokemons().buscarTipo(String.valueOf(datos[4]) + datos[5]);
 			this.labelPokemon.setIcon(new ImageIcon(PantallaPokemon.class.getResource(this.foto)));
 		}

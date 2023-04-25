@@ -11,8 +11,11 @@ public class PokemonAcero extends Pokemon{
 	
 	protected int aumentarAtaque(Tipo tipo) {
 		int aumento = 1;
-		if (tipo.equals(Tipo.HIELO) || tipo.equals(Tipo.ROCA)|| tipo.equals(Tipo.HADA)) {
+		if (tipo.equals(Tipo.TIERRA) || tipo.equals(Tipo.FUEGO)|| tipo.equals(Tipo.LUCHA)) {
 			aumento = this.random.nextInt(2)+2;
+		}
+		if (tipo.equals(Tipo.VENENO)) {
+			aumento = 0;
 		}
 		return aumento;
 	}

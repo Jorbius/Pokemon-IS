@@ -11,8 +11,11 @@ public class PokemonHada extends Pokemon{
 	
 	protected int aumentarAtaque(Tipo tipo) {
 		int aumento = 1;
-		if (tipo.equals(Tipo.LUCHA) || tipo.equals(Tipo.SINIESTRO)|| tipo.equals(Tipo.DRAGON)) {
+		if (tipo.equals(Tipo.VENENO) || tipo.equals(Tipo.ACERO)) {
 			aumento = this.random.nextInt(2)+2;
+		}
+		if (tipo.equals(Tipo.DRAGON) ) {
+			aumento = 0;
 		}
 		return aumento;
 	}
