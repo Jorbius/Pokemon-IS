@@ -49,9 +49,9 @@ public class CargarPokemons {
 		this.pokemons.put("FUEGO1", "/Fotos/charmeleon.png");
 		this.pokemons.put("FUEGO2", "/Fotos/charizard.png");
 		
-		this.pokemons.put("HADA0", "/Fotos/flabebe.png");
-		this.pokemons.put("HADA1", "/Fotos/floette.png");
-		this.pokemons.put("HADA2", "/Fotos/florges.png");
+		this.pokemons.put("HADA0", "/Fotos/tinkatink.png");
+		this.pokemons.put("HADA1", "/Fotos/tinkaton.png");
+		this.pokemons.put("HADA2", "/Fotos/Tinkatuff.png");
 		
 		this.pokemons.put("HIELO0", "/Fotos/vanillite.png");
 		this.pokemons.put("HIELO1", "/Fotos/vanillish.png");
